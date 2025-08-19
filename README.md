@@ -28,7 +28,7 @@
 1. Clone this repository
 
 ```bash
-git clone https://github.com/reamd/remove-bg.git
+git clone https://github.com/daxmeng/remove-bg.git
 cd remove-bg
 ```
 
@@ -54,7 +54,7 @@ docker run -d -p 8080:80 --name remove-bg reamd/remove-bg:latest
 
 If you have any question, please follow me on X:
 
-[![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/DJ_wilderness)](https://x.com/DJ_wilderness)
+[![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/daxmeng)](https://x.com/daxmeng)
 
 ## :information_desk_person:Acknowledgements
 

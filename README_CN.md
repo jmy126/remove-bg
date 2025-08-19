@@ -28,7 +28,7 @@
 1. 克隆仓库
 
 ```bash
-git clone https://github.com/reamd/remove-bg.git
+git clone https://github.com/daxmeng/remove-bg.git
 cd remove-bg
 ```
 
@@ -54,10 +54,10 @@ docker run -d -p 8080:80 --name remove-bg reamd/remove-bg:latest
 
 如果你有任何问题，请关注我的`X`或微信公众号:
 
-- [![X关注](https://img.shields.io/twitter/follow/DJ_wilderness)](https://x.com/DJ_wilderness)
+- [![X关注](https://img.shields.io/twitter/follow/daxmeng)](https://x.com/daxmeng)
 
 - 微信公众号
-  ![微信公众号](https://raw.githubusercontent.com/reamd/reamd/master/assets/wechat_pub_acct.jpg)
+  ![微信公众号](https://raw.githubusercontent.com/daxmeng/daxmeng/master/assets/wechat_pub_acct.jpg)
 
 ## :information_desk_person:致谢
 
