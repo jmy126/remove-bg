@@ -2,7 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import { loadOnnxJS } from './assets/script/utils';
 // import reportWebVitals from './reportWebVitals';
+
+loadOnnxJS();
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

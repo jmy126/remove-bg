@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/runtime": "^7.28.3",
     "@inlang/paraglide-js": "1.10.1",
     "@nextui-org/react": "^2.4.2",
     "@reactuses/core": "^5.0.15",
@@ -18,7 +19,7 @@
     "framer-motion": "^11.2.11",
     "localforage": "^1.10.0",
     "ndarray": "^1.0.19",
-    "onnxruntime-web": "1.22.0",
+    "onnxruntime-web": "1.20.0",
     "react": "^18.3.1",
     "react-compare-slider": "^3.1.0",
     "react-dom": "^18.3.1",
@@ -29,7 +30,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide && react-scripts build",
+    "build": "GENERATE_SOURCEMAP=false paraglide-js compile --project ./project.inlang --outdir ./src/paraglide && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "postinstall": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide",
@@ -64,5 +65,8 @@
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
+  },
+  "resolutions": {
+    "@babel/runtime": "^7.28.3"
   }
 }

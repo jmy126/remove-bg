@@ -1,7 +1,5 @@
 import ndarray, { NdArray } from 'ndarray';
 import type ORT from 'onnxruntime-web';
-import * as ort_cpu from 'onnxruntime-web';
-import * as ort_gpu from 'onnxruntime-web/webgpu';
 import { getWebCanUse, setOrtEnv } from './utils';
 import { getModel } from './model';
 
@@ -186,8 +184,8 @@ export function getCanvasData(imgUrl: string): Promise<ImageData> {
 
 export async function initSession() {
   const webCanUse = await getWebCanUse();
-  const ort = webCanUse.webGpu ? ort_gpu : ort_cpu;
   if (!session) {
+    console.log(3456, window.ort);
     setOrtEnv(webCanUse, ort.env);
     console.time('sessionCreate');
     const modelBuffer = (await getModel()) as ArrayBuffer;

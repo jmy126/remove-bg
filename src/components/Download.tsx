@@ -33,7 +33,7 @@ const Download: React.FC = () => {
               console.log('download model successfully');
               setModel(data as ArrayBuffer);
               onClose();
-              initSession();
+              // setTimeout(initSession);
             } else {
               // download failed
               setDownloadFailed(true);
@@ -41,7 +41,7 @@ const Download: React.FC = () => {
           },
         });
       } else {
-        initSession();
+        // setTimeout(initSession);
       }
     }
     setModelData();

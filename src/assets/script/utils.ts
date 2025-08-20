@@ -123,6 +123,26 @@ export const getWebCanUse = async (): Promise<IWebCanUse> => {
   };
 };
 
+export const getOnnxruntimeSrc = async () => {
+  const webCanUse = await getWebCanUse();
+  if (webCanUse.webGpu) {
+    return `${WASM_PATH}ort.webgpu.min.js`;
+  }
+  if (webCanUse.wasm) {
+    if (webCanUse.simd || webCanUse.threads) {
+      return `${WASM_PATH}ort.wasm.min.js`;
+    }
+    return `${WASM_PATH}ort.wasm-core.min.js`;
+  }
+  return `${WASM_PATH}ort.min.js`;
+};
+
+export const loadOnnxJS = async () => {
+  const script = document.createElement('script');
+  script.src = await getOnnxruntimeSrc();
+  document.head.appendChild(script);
+};
+
 export const setOrtEnv = (webCanUse: IWebCanUse, env: ORT.Env) => {
   if (process.env.NODE_ENV === 'development') {
     console.log('ORT DEV MODE:', webCanUse);
