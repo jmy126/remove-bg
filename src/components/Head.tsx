@@ -45,7 +45,7 @@ const Head: React.FC<HeadComponentProps> = ({ onLanguageChange }) => {
         >
           {languageTag() === 'zh' ? 'en' : '中文'}
         </li>
-        <li className='px-2 ml-2'>
+        {/* <li className='px-2 ml-2'>
           <a
             className='inline-block'
             href='https://github.com/reamd/remove-bg'
@@ -58,7 +58,7 @@ const Head: React.FC<HeadComponentProps> = ({ onLanguageChange }) => {
               src={isHovered ? githubPrimary : github}
             />
           </a>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );
